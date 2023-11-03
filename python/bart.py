@@ -7,11 +7,6 @@
 # 2018 Soumick Chatterjee <soumick.chatterjee@ovgu.de> , WSL Support
 
 import subprocess as sp
-try:
-    subprocess.check_output("dir /f",shell=True,stderr=subprocess.STDOUT)
-except subprocess.CalledProcessError as e:
-    raise RuntimeError("command '{}' return with error (code {}): {}".format(e.cmd, e.returncode, e.output))
-    
 import tempfile as tmp
 import cfl
 import os
